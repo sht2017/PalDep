@@ -2,9 +2,10 @@
 
 source /etc/environment
 
-
 echo -e "[info] update database"
 apt-get update
+echo -e "[info] install necessary packages for upgrade"
+apt-get install update-notifier-common -y
 echo -e "[info] upgrade"
 apt-get upgrade -y
 apt-get dist-upgrade -y
