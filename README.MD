@@ -8,7 +8,21 @@ This project aims to provide a fast deployment solution for [Palworld](https://s
 
 
 ## How to use?
-copy, paste and enter
+copy, paste, enter and enjoy =)
+
+### Prepare
+Make sure ```curl```, ```tar``` and  ```unzip``` is installed on your system.
+
+If you are not that sure, you may try (For Debian and Ubuntu):
 ```Shell
-bash <(curl -sL https://raw.githubusercontent.com/sht2017/PalDep/Dev/paldep.sh)
+sudo apt update && sudo apt install curl tar unzip -y
+```
+
+### Install
+```Shell
+bash <(curl -sL https://raw.githubusercontent.com/sht2017/PalDep/Dev/paldep.sh) install
+```
+### Remove
+```Shell
+bash <(curl -sL https://raw.githubusercontent.com/sht2017/PalDep/Dev/paldep.sh) clean
 ```
