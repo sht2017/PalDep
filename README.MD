@@ -8,3 +8,7 @@ This project aims to provide a fast deployment solution for [Palworld](https://s
 
 
 ## How to use?
+copy, paste and enter
+```Shell
+bash <(curl -sL https://raw.githubusercontent.com/sht2017/PalDep/Dev/deploy.sh)
+```
