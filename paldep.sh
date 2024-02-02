@@ -66,7 +66,7 @@ install() {
     echo -e "[info] finish download dependency"
 
 
-    ${PROOT} -S ${ROOTFS} -w /home/steam -v -1 -i 0:0 /bin/bash --rcfile <(cat deploy.sh)
+    ${PROOT} -S ${ROOTFS} -w /home/steam -v -1 -i 0:0 /bin/bash --rcfile <(curl -sL https://raw.githubusercontent.com/sht2017/PalDep/Dev/deploy.sh)
     exit 0
 }
 
