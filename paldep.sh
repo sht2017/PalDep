@@ -12,6 +12,7 @@ check_dependency() {
     [ ! -d ${HOME_PATH} ] && echo "Home directory does not exist. Abort." && exit 1
     [ -z "$(command -v tar)" ] && echo "Command \"tar\" not found. Abort." && exit 1
     [ -z "$(command -v curl)" ] && echo "Command \"curl\" not found. Abort." && exit 1
+    [ -z "$(command -v unzip)" ] && echo "Command \"unzip\" not found. Abort." && exit 1
 }
 
 init() {
@@ -65,7 +66,7 @@ install() {
     echo -e "[info] finish download dependency"
 
 
-    ${PROOT} -R ${ROOTFS} -w /home/steam -v -1 -i 0:0 /bin/bash --rcfile <(curl -sL https://raw.githubusercontent.com/sht2017/PalDep/Dev/deploy.sh)
+    ${PROOT} -S ${ROOTFS} -w /home/steam -v -1 -i 0:0 /bin/bash --rcfile <(cat deploy.sh)
     exit 0
 }
 
